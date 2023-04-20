@@ -1,0 +1,37 @@
+#+TITLE: Emacs AI Utilities
+
+Emacs AI Utilities is a package that provides a set of interactive functions and utilities to enhance the interaction between Emacs and AI-based systems. It includes functions for data manipulation, machine learning, and natural language processing.
+
+* Features
+
+  - Buffer Size Limiting: Functions to limit buffer size to avoid exceeding ChatGPT maximum submission size (`ai-utils-limit-buffer-size`, `ai-utils-copy-to-kill-ring`).
+
+  - AI Block Insertion: Functions to insert empty AI blocks into documents (`ai-utils-insert-ai`, `ai-utils-insert-ai-image`).
+
+  - Prompt Generation: Functions to generate various prompts for shell scripts, Python simulations, and literary-style writing (`ai-utils-insert-prompt-shell-script`, `ai-utils-insert-prompt-python-simulator`, `ai-utils-insert-prompt-social-media-post-sartre`, `ai-utils-insert-prompt-social-media-post-joyce`).
+
+* Usage
+
+  Functions can be invoked interactively in Emacs. For example:
+  #+BEGIN_SRC elisp
+  (ai-utils-insert-ai)
+  #+END_SRC
+
+* Customization
+
+  The package provides a customization group (`ai-utils`) and a customizable variable (`ai-utils-max-prompt-size`) to configure the maximum number of characters allowed in a ChatGPT prompt.
+
+* Future Enhancements
+
+  - Additional AI Utilities: We plan to expand the package with more utilities for AI interaction, such as natural language processing and machine learning tools.
+
+  - Enhanced AI Block Support: We aim to provide more options and features for AI blocks, such as image generation and customization.
+
+* Contributing
+
+  Contributions to Emacs AI Utilities are welcome! Please refer to the [[file:CONTRIBUTING.org][CONTRIBUTING]] guidelines for details on how to contribute to the project.
+
+* License
+
+  Emacs AI Utilities is [[file:LICENSE][MIT licensed]]. Copyright (C) 2023 Jason Walsh. Authors: Jason Walsh <j@wal.sh>
+
