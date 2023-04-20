@@ -54,10 +54,15 @@
   (interactive)
   (insert "\n#+begin_ai :image :size 256x256\n\n#+end_ai\n"))
 
-(defun ai-utils-insert-prompt-python-simulator ()
-  "Insert prompt for creating a simulation using Click in Python."
+(defun ai-utils-insert-prompt-shell-script ()
+  "Insert prompt for creating a shell script with a specified naming convention."
   (interactive)
-  (insert "Create a basic command-line interface in Python using Click, typing, docstrings that models the following and runs simulation when executed from the command line: \n\n"))
+  (insert "Please provide a shell script that performs the following tasks [describe tasks here]. When naming the script file, please use dashes to delimit words in the filename, following the convention commonly used in bash, sh, and zsh scripts.\n\n"))
+
+(defun ai-utils-insert-prompt-python-simulator ()
+  "Insert prompt for creating a simulation using Click in Python with typing, docstrings, and standard nomenclature."
+  (interactive)
+  (insert "Create a basic command-line interface in Python using Click, typing, and docstrings that models the following and runs simulation when executed from the command line. Please adhere to standard Python nomenclature and include type annotations as well as descriptive docstrings for functions and classes. Describe the tasks here: \n\n"))
 
 (defun ai-utils-insert-prompt-social-media-post-sartre ()
   "Insert prompt for writing a social media post in a conversational first-person tone like Sartre."
