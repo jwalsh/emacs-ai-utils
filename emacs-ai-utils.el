@@ -54,10 +54,35 @@
   (interactive)
   (insert "\n#+begin_ai :image :size 256x256\n\n#+end_ai\n"))
 
+(defun ai-utils-insert-ai-image-1920x1080 ()
+  "Insert an empty AI block into the current document."
+  (interactive)
+  (insert "\n#+begin_ai :image :size 1920x1080\n\n#+end_ai\n"))
+
+(defun ai-utils-insert-ai-image-1280x720 ()
+  "Insert an empty AI block into the current document."
+  (interactive)
+  (insert "\n#+begin_ai :image :size 1280x720\n\n#+end_ai\n"))
+
+(defun ai-utils-insert-ai-image-640x480 ()
+  "Insert an empty AI block into the current document."
+  (interactive)
+  (insert "\n#+begin_ai :image :size 640x480\n\n#+end_ai\n"))
+
+(defun ai-utils-insert-ai-image-320x240 ()
+  "Insert an empty AI block into the current document."
+  (interactive)
+  (insert "\n#+begin_ai :image :size 320x240\n\n#+end_ai\n"))
+
 (defun ai-utils-insert-prompt-shell-script ()
   "Insert prompt for creating a shell script with a specified naming convention."
   (interactive)
   (insert "Please provide a shell script that performs the following tasks [describe tasks here]. When naming the script file, please use dashes to delimit words in the filename, following the convention commonly used in bash, sh, and zsh scripts.\n\n"))
+
+(defun ai-utils-fix-program ()
+  "Insert prompt for fixing a script according to best practices."
+  (interactive)
+  (insert "Update the following program to adhere to best practices for all programming languages. Implement appropriate documentation practices, creating a test harness, and incorporating command line access where possible. Use appropriate design patterns, such as Enums and Classes, to decompose the program. The program follows: \n\n"))
 
 (defun ai-utils-insert-prompt-python-simulator ()
   "Insert prompt for creating a simulation using Click in Python with typing, docstrings, and standard nomenclature."

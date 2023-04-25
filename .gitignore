@@ -9,3 +9,7 @@
 
 # Undo-tree save-files
 *.~undo-tree
+autom4te.cache
+config.log
+config.status
+configure
