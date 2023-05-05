@@ -84,6 +84,11 @@
   (interactive)
   (insert "Update the following program to adhere to best practices for all programming languages. Implement appropriate documentation practices, creating a test harness, and incorporating command line access where possible. Use appropriate design patterns, such as Enums and Classes, to decompose the program. The program follows: \n\n"))
 
+(defun ai-utils-repository ()
+  "Insert prompt for fixing a script according to best practices."
+  (interactive)
+  (insert "Create a shell script that build out a repository for a 1 week course covering the topic noted below. Use the canonical programming language for that topic and name the repoistory, directories, and files correctly for the the language. Add build tooling and include a Makefile in addition to version managing tools. Include dependency managers as appropriate. For code use best practices like typing, docstrings, REPL, and command line access. Topic: \n\n"))
+
 (defun ai-utils-insert-prompt-python-simulator ()
   "Insert prompt for creating a simulation using Click in Python with typing, docstrings, and standard nomenclature."
   (interactive)
