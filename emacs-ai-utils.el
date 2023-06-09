@@ -54,25 +54,25 @@
   (interactive)
   (insert "\n#+begin_ai :image :size 256x256\n\n#+end_ai\n"))
 
-(defun ai-utils-insert-ai-image-1920x1080 ()
+(defun ai-utils-insert-ai-image-1080x1080 ()
   "Insert an empty AI block into the current document."
   (interactive)
-  (insert "\n#+begin_ai :image :size 1920x1080\n\n#+end_ai\n"))
+  (insert "\n#+begin_ai :image :size 1080x1080\n\n#+end_ai\n"))
 
-(defun ai-utils-insert-ai-image-1280x720 ()
+(defun ai-utils-insert-ai-image-720x720 ()
   "Insert an empty AI block into the current document."
   (interactive)
-  (insert "\n#+begin_ai :image :size 1280x720\n\n#+end_ai\n"))
+  (insert "\n#+begin_ai :image :size 720x720\n\n#+end_ai\n"))
 
-(defun ai-utils-insert-ai-image-640x480 ()
+(defun ai-utils-insert-ai-image-480x480 ()
   "Insert an empty AI block into the current document."
   (interactive)
-  (insert "\n#+begin_ai :image :size 640x480\n\n#+end_ai\n"))
+  (insert "\n#+begin_ai :image :size 480x480\n\n#+end_ai\n"))
 
-(defun ai-utils-insert-ai-image-320x240 ()
+(defun ai-utils-insert-ai-image-320x320 ()
   "Insert an empty AI block into the current document."
   (interactive)
-  (insert "\n#+begin_ai :image :size 320x240\n\n#+end_ai\n"))
+  (insert "\n#+begin_ai :image :size 320x320\n\n#+end_ai\n"))
 
 (defun ai-utils-insert-prompt-shell-script ()
   "Insert prompt for creating a shell script with a specified naming convention."
