@@ -47,7 +47,7 @@
 (defun ai-utils-summarize ()
   "Insert an empty summarization block into the current document."
   (interactive)
-  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nSummarize the following article in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level and if suitable suggest code, model, or simulation examples in Clojure:\n\n- \n#+end_src\n"))
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nSummarize the following article in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level and if suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode (e.g., #+begin_src blocks. \n\n- \n\n#+end_src"))
 
 (defun ai-utils-insert-ai ()
   "Insert an empty AI block into the current document."
