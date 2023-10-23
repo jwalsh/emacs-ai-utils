@@ -49,6 +49,12 @@
   (interactive)
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nSummarize the following article in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level and if suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode (e.g., #+begin_src blocks. \n\n- \n\n#+end_src"))
 
+
+(defun ai-utils-explain ()
+  "Insert an empty summarization block into the current document."
+  (interactive)
+  (insert "\nKindly do longform: summarize, explain specific evidence, evaluate results and emphasize limitations, caveats, practicality and consequences for human destiny. Discuss especially anything surprising or unexpected and be specific. Format for org-mode at level 3. If suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode. Format code #+begin_src blocks. Use org-mode linking styles. Ensure code literals in in ~ rather than `. \n\n- \n\n#+end_src"))
+
 (defun ai-utils-insert-ai ()
   "Insert an empty AI block into the current document."
   (interactive)
