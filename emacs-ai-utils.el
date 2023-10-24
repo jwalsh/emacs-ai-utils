@@ -44,21 +44,54 @@
     (kill-new content)
     (message "Copied up to %d characters into the kill ring." ai-utils-max-prompt-size)))
 
-(defun ai-utils-summarize ()
-  "Insert an empty summarization block into the current document."
-  (interactive)
-  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nSummarize the following article in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level and if suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode (e.g., #+begin_src blocks. \n\n- \n\n#+end_src"))
+(defun ai-utils-summarize (url)
+  "Insert a summarization block for an article from URL into the current org document."
+  (interactive "sURL: ")
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
+Summarize the article at `" url "` in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level 3 headlines (*** <header>). If suitable, suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode (e.g., #+begin_src blocks).  
+#+end_src\n"))
 
-(defun ai-utils-explain ()
-  "Insert an empty summarization block into the current document."
-  (interactive)
-  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nKindly do longform: summarize, explain specific evidence, evaluate results and emphasize limitations, caveats, practicality and consequences for human destiny. Discuss especially anything surprising or unexpected and be specific. Generate three questions the author should be asked or as I reader I should be able to answer. Respond in the voice of Hannah Arendt. Format for org-mode at level 3. If suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode. Format code #+begin_src blocks. Use org-mode linking styles. Ensure code literals in in ~ rather than `. Suggest a good name for the org-mode file if we wanted to save your summary. \n\n- \n\nThe respose structure should look like the following:\n\n*** Summary\n\n*** Impact\n*** Code\n*** Questions\n\n#+end_src"))
 
-(defun ai-utils-bootstrap ()
-  "Insert an empty summarization block into the current document."
-  (interactive)
-  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nBootstrap the education of a software developer with Python experience for the following topic:\n\n- \n\nThe response should be formatted for org-mode starting at heading 3.\n#+end_src"))
+(defun ai-utils-explain (url)
+  "Insert an explanation block for an article from URL into the current org document."
+  (interactive "sURL: ")
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
+In the style of Hannah Arendt, provide a longform explanation of the article at `" url "`:
 
+- Summarize the key points  
+- Explain specific evidence
+- Evaluate results and emphasize limitations, caveats, practicality and consequences for human destiny
+- Discuss anything surprising or unexpected and be specific
+- Generate 3 questions the author should be asked or I as a reader should be able to answer
+
+Format as org-mode headings at level 3. If suitable, suggest code examples in Clojure using #+begin_src blocks with ~ for code literals. Suggest a filename to save this summary.
+
+The response structure should be (without the initial spaces):
+
+ *** Summary
+ *** Impact 
+ *** Code
+ *** Questions
+
+Do this without apologizing for being an AI or mentioning the complexity of the request. 
+
+#+end_src
+"))
+
+(defun ai-utils-bootstrap (topic)
+  "Insert a learning bootstrap block for TOPIC into the current org document."
+  (interactive "sTopic: ")
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
+Bootstrap the education of a software developer with Python experience on `" topic "`:
+
+- Provide a learning roadmap in org-mode format starting at heading level 3 (*** <header>)
+- Include key concepts, technologies, and skills to learn
+- Suggest courses, books, tutorials, and projects with links 
+- Prioritize and sequence the material logically
+
+#+end_src
+"))
+  
 (defun ai-utils-cyberpunk-url (url)
   "Insert AI image generation blocks for cyberpunk themes.
 
@@ -66,7 +99,7 @@ Prompt GPT to generate prompts based on the story at URL."
   (interactive "sURL: ")
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
 
-Read the following web site and generate five cyberpunk-themed image prompts. Be explicit about style, location, and feel of the generated image. Each of the topics should be surrounded by #+begin_ai blocks like the following:
+Read the following web site and generate five cyberpunk-themed image prompts that relate to the content. Be explicit about style, location, and feel of the generated image. Each of the topics should be surrounded by #+begin_ai blocks like the following:
 
  #+begin_ai :image :size 256x256
  <topic and prompt>
