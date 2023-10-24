@@ -49,11 +49,20 @@
   (interactive)
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nSummarize the following article in org-mode format using the title of the article at level 3 (also include a reference to the article URL, publish date, author, etc. as available) then all other points as level and if suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode (e.g., #+begin_src blocks. \n\n- \n\n#+end_src"))
 
-
 (defun ai-utils-explain ()
   "Insert an empty summarization block into the current document."
   (interactive)
-  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nKindly do longform: summarize, explain specific evidence, evaluate results and emphasize limitations, caveats, practicality and consequences for human destiny. Discuss especially anything surprising or unexpected and be specific. Respond in the voice of Hannah Arendt. Format for org-mode at level 3. If suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode. Format code #+begin_src blocks. Use org-mode linking styles. Ensure code literals in in ~ rather than `. Suggest a good name for the org-mode file if we wanted to save your summary. \n\n- \n\n#+end_src"))
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nKindly do longform: summarize, explain specific evidence, evaluate results and emphasize limitations, caveats, practicality and consequences for human destiny. Discuss especially anything surprising or unexpected and be specific. Generate three questions the author should be asked or as I reader I should be able to answer. Respond in the voice of Hannah Arendt. Format for org-mode at level 3. If suitable suggest code, model, or simulation examples in Clojure. Ensure headers and code blocks are formatted correctly for org-mode. Format code #+begin_src blocks. Use org-mode linking styles. Ensure code literals in in ~ rather than `. Suggest a good name for the org-mode file if we wanted to save your summary. \n\n- \n\nThe respose structure should look like the following:\n\n*** Summary\n\n*** Impact\n*** Code\n*** Questions\n\n#+end_src"))
+
+(defun ai-utils-bootstrap ()
+  "Insert an empty summarization block into the current document."
+  (interactive)
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nBootstrap the education of a software developer with Python experience for the following topic:\n\n- \n\nThe response should be formatted for org-mode starting at heading 3.\n#+end_src"))
+
+(defun ai-utils-cyberpunk ()
+  "Insert an empty summarization block into the current document."
+  (interactive)
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nRead the following and given the topics noted generate five image prompts of the topic and a cyberpunk theme:\n\n- \n\nBe explicit about style, location, and feel of the generated image.\n#+end_src"))
 
 (defun ai-utils-insert-ai ()
   "Insert an empty AI block into the current document."
