@@ -56,7 +56,7 @@ Summarize the article at `" url "` in org-mode format using the title of the art
   "Insert an explanation block for an article from URL into the current org document."
   (interactive "sURL: ")
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
-In the style of Hannah Arendt, provide a longform explanation of the article at `" url "`:
+In the style of Hannah Arendt, provide a longform explanation of the article at ~" url "~:
 
 - Summarize the key points  
 - Explain specific evidence
@@ -64,7 +64,7 @@ In the style of Hannah Arendt, provide a longform explanation of the article at 
 - Discuss anything surprising or unexpected and be specific
 - Generate 3 questions the author should be asked or I as a reader should be able to answer
 
-Format as org-mode headings at level 3. If suitable, suggest code examples in Clojure using #+begin_src blocks with ~ for code literals. Suggest a filename to save this summary.
+Format as org-mode headings at level 3. If appropriate, suggest code examples in Clojure using #+begin_src blocks with ~ for code literals. Suggest a filename to save this summary.
 
 The response structure should be (without the initial spaces):
 
