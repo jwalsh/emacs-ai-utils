@@ -59,6 +59,23 @@
   (interactive)
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"\nBootstrap the education of a software developer with Python experience for the following topic:\n\n- \n\nThe response should be formatted for org-mode starting at heading 3.\n#+end_src"))
 
+(defun ai-utils-cyberpunk-url (url)
+  "Insert AI image generation blocks for cyberpunk themes.
+
+Prompt GPT to generate prompts based on the story at URL."
+  (interactive "sURL: ")
+  (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
+
+Read the following web site and generate five cyberpunk-themed image prompts. Be explicit about style, location, and feel of the generated image. Each of the topics should be surrounded by #+begin_ai blocks like the following:
+
+ #+begin_ai :image :size 256x256
+ <topic and prompt>
+ #+end_ai
+
+- " url "
+
+#+end_src"))
+
 (defun ai-utils-cyberpunk ()
   "Insert an empty summarization block into the current document."
   (interactive)
