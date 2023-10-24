@@ -56,7 +56,11 @@ Summarize the article at `" url "` in org-mode format using the title of the art
   "Insert an explanation block for an article from URL into the current org document."
   (interactive "sURL: ")
   (insert "\n#+begin_src chatgpt-shell :version \"gpt-4\"
-In the style of Hannah Arendt, provide a longform explanation of the article at ~" url "~:
+In the style of Hannah Arendt, provide a longform explanation of the article at:
+
+- " url "
+
+You are responsible for the following:
 
 - Summarize the key points  
 - Explain specific evidence
