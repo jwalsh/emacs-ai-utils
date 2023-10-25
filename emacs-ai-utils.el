@@ -68,7 +68,7 @@ You are responsible for the following:
 - Discuss anything surprising or unexpected and be specific
 - Generate 3 questions the author should be asked or I as a reader should be able to answer
 
-Format as org-mode headings at level 3. If appropriate, suggest code examples in Clojure using #+begin_src blocks with ~ for code literals. Suggest a filename to save this summary.
+Format as org-mode headings at level 3. If appropriate, suggest code examples in Clojure using #+begin_src clojure blocks with ~ for inline code literals. Suggest a filename to save this summary (lowercase and dash delimited). Include the original URL in the references and any high quality references you find.
 
 The response structure should be (without the initial spaces):
 
@@ -76,6 +76,7 @@ The response structure should be (without the initial spaces):
  *** Impact 
  *** Code
  *** Questions
+ *** References
 
 Do this without apologizing for being an AI or mentioning the complexity of the request. 
 
